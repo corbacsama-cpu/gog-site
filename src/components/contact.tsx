@@ -27,9 +27,7 @@ export default function Contact() {
           <div class="contact-right">
             <form
               class="contact-form"
-              id="contactForm"
-             
-            >
+              id="contactForm">
               <input
                 type="email"
                 id="email"

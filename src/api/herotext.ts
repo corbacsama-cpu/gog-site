@@ -1,7 +1,7 @@
 // heroTexts.ts
 export const heroTexts: string[][] = [
     ["EXPERTISE", "INDUSTRIELLE"],
-    ["Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.", "Aliquam in hendrerit urna.Pellentesque sit amet sapien."],
+    ["Nous allions innovation et responsabilité pour développer des solutions industrielles durables, favorisant l’efficacité énergétique, la sécurité et la réduction de l’impact environnemental."],
     [". GENIE CIVIL & LOGISTIQUE"],
     [". SECTEUR INDUSTRIEL"],
     [". SECTEUR DE SECURITE"]

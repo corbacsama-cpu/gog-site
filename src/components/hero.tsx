@@ -17,10 +17,9 @@ export default function Hero() {
       {/* Container */}
       <div
         class="relative flex flex-col lg:flex-row  justify-between items-center lg:items-end 
-        gap-6 px-4 sm:px-8 text-white"
-      >
+        gap-6 px-4 sm:px-8 text-white">
         {/* Carré haut gauche */}
-        <div class="absolute top-4 md:top-10 lg:top-16 left-4 w-6 h-6 sm:w-8 sm:h-8 bg-white"></div>
+      <div class="absolute top-0 md:top-10 lg:top-16 left-4 w-8 h-8  bg-white"/>
 
         {/* Texte gauche */}
         <div class="flex flex-col w-full lg:w-1/2 text-left space-y-2 order-2 lg:order-1">
@@ -34,18 +33,18 @@ export default function Hero() {
         </div>
 
         {/* Bloc droit */}
-        <div class="flex flex-col space-y-4 w-full  lg:w-1/1 order-1 lg:order-2 ">
+        <div class="flex flex-col gap-4 items-start w-[80%]  lg:w-1/1 order-1 lg:order-2 ">
 
           <div class="flex justify-end md:flex md:justify-end">
-            <h1 class="text-4xl md:text-6xl lg:text-[120px] font-bold text-justify fade-up leading-tight">
+            <h1 class="text-4xl md:text-6xl lg:text-[120px] font-bold fade-up">
               {text().map((line) => (
-                <span class="block">{line}</span>
+                <span class="block nolineheight">{line}</span>
               ))}
             </h1>
           </div>
 
           <div class="flex justify-end md:flex md:justify-end">
-            <p class="uppercase opacity-60 text-xs  md:text-base lg:text-[16px] text-start">
+            <p class="uppercase opacity-60 text-xs  md:text-base lg:text-[16px] ">
               {heroTexts[1].map((line) => (
                 <span class="block">{line}</span>
               ))}
@@ -54,27 +53,11 @@ export default function Hero() {
         </div>
       </div>
 
-      <Process
-        bgColor="#000"
-        padding="py-6 px-4 sm:px-8"
-        items={[
-          {
-            text: "DEVELOPPEMENT DURABLE",
-            textColor: "text-white",
-            fontSize: "text-base sm:text-lg md:text-xl",
-          },
-          {
-            text: "PROCÉDÉS AVANCÉS",
-            textColor: "text-gray-300",
-            fontSize: "text-sm sm:text-base md:text-lg",
-          },
-          {
-            text: "PERFORMANCES OPTIMISÉES",
-            textColor: "text-white",
-            fontSize: "text-sm sm:text-base md:text-lg",
-          },
-        ]}
-      />
+      <div class="flex  py-8 mx-4 justify-between text-xs sm:text-sm md:text-lg font-semibold tracking-wide">
+                  <span>DEVELOPPEMENT</span>
+                  <span>PROCÉDÉS</span>
+                  <span>PERFORMANCES</span>
+                </div>
     </section>
   );
 }

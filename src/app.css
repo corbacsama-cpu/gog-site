@@ -17,22 +17,38 @@ body {
   background: rgb(var(--background-rgb));
   color: rgb(var(--foreground-rgb));
   font-family: 'Inter', sans-serif;
-  letter-spacing: 5%;
+  letter-spacing: 10%;
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden; 
 }
 
-.nolineHeight{
- line-height: 100%;
+.nolineheight{
+ line-height: 90%;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
 /* Contact section */
 .contact-section {
   position: relative;
   background: url("images/team2.jpeg") no-repeat center center;
   background-size: cover;
-  padding: 120px;
+  padding: 40px;
   color: white;
   z-index: 1;
   overflow: hidden;
@@ -57,7 +73,7 @@ body {
   max-width: 1150px;
   margin: 0 auto;
   padding: auto;
-  gap: 80px;
+  gap: 40px;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -110,7 +126,51 @@ body {
   border-radius: 4px;
   outline: none;
 }
+.sendE {
+  background-color: white;
+  padding: 12px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
 
+/* Conteneur principal */
+.last {
+  display: flex;
+  justify-content: space-between; /* Aligne les éléments aux extrémités */
+  align-items: center;           /* Centre verticalement */
+  padding: 20px;       /* Fond sombre pour contraster avec le texte */
+  color: black;                   /* Texte blanc */
+  font-size: 1rem;
+  max-width: 1150px;
+  margin: 0 auto;
+  border-top: 1px solid #555;    /* Bordure légère en haut */
+  flex-wrap: wrap;               /* Permet au footer de rester responsive */
+  gap: 10px;                     /* Petit espace si les éléments passent à la ligne */
+}
+
+/* Texte copyright */
+.copyright {
+  font-size: 0.9rem;
+}
+
+/* Texte développeur */
+.developer {
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* Responsive : centre le texte si la largeur est petite */
+@media (max-width: 600px) {
+  .last {
+    flex-direction: column;
+    text-align: center;
+  }
+  .developer {
+    text-align: center;
+  }
+}
 /* Padding spécifique pour le textarea du contact */
 #message {
   width: 100%; /* largeur fixe */
@@ -139,13 +199,102 @@ body {
   border-color: #1b7eb3; /* couleur focus */
   box-shadow: 0 0 8px rgba(30, 215, 96, 0.4);
 }
-.contact-form button {
+/* Bouton contact */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%; /* 3 slides */
+  animation: slide 18s infinite;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column; /* mobile */
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .slide {
+    flex-direction: row; /* desktop */
+  }
+}
+
+/* Image */
+.slide .hero-image {
+  flex: 1;                   /* prend toute la partie gauche */
+  min-height: 250px;        /* mobile minimum */
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .slide .hero-image {
+    min-height: 688px;       /* desktop minimum */
+  }
+}
+
+@media (min-width: 640px) {
+  .slide .hero-image {
+    min-height: 240px;
+  }
+}
+
+
+/* Contenu */
+.slide .hero-content {
+  flex: 1;                   /* prend l’espace droit */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+@media (min-width: 640px) {
+  .slide .hero-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .slide .hero-content {
+    width: 66.666%;
+    padding: 3rem;
+  }
+}
+
+/* Animation */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+
+  35% { transform: translateX(-100%); }
+  65% { transform: translateX(-100%); }
+
+  70% { transform: translateX(-200%); }
+  95% { transform: translateX(-200%); }
+
+  100% { transform: translateX(0); }
+}
+
+/* Bouton */
+.hero-content button {
   background-color: white;
   color: black;
-  padding: 8px;
+  padding: 12px 12px;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.hero-content button:hover {
+  background-color: #f0f0f0;
 }

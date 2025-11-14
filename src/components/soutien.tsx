@@ -16,7 +16,7 @@ const logos: Logocategory[] = [
 
 function LogoSection(props: { Logocategory: Logocategory }) {
   return (
-    <div class="flex  w-[139px] h-[76px] shrink-0">
+    <div class="flex w-32 h-20 shrink-0 md:w-36 md:h-24 lg:w-40 lg:h-28 px-4">
       <img
         src={props.Logocategory.image}
         alt="logo"
@@ -28,9 +28,10 @@ function LogoSection(props: { Logocategory: Logocategory }) {
 
 export default function LogoCarousel() {
   return (
-    <div class="overflow-hidden w-full justify-center flex bg-white py-6">
-      <div class="flex animate-marquee">
-        <For each={logos}>
+    <div class="overflow-hidden w-full flex bg-white py-6">
+      <div class="animate-marquee">
+        {/* Logos x2 pour effet continu */}
+        <For each={[...logos, ...logos]}>
           {(logo) => <LogoSection Logocategory={logo} />}
         </For>
       </div>

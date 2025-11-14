@@ -40,7 +40,7 @@ const services: MetallurgieCategory[] = [
         breakpoint: [".BREAK A", ".BREAK B"],
       },
       {
-        title: "METALLURGIE 3",
+        title: "METALLURGIE",
         subtitle: "Encore un autre texte pour le bloc 3",
         points: [".POINT X", ".POINT Y"],
         breakpoint: [".BREAK X", ".BREAK Y"],
@@ -55,7 +55,7 @@ function MetallurgieComponent(props: { service: MetallurgieCategory }) {
       {/* Bloc gauche */}
       <div class="flex-1 flex-col justify-between">
         <div
-          class="w-full h-[400px] md:w-[504px] md:h-[702px] bg-center bg-cover"
+          class=" h-[400px] w-[300px] md:h-[400px] lg:w-[504px] lg:h-[702px] bg-center bg-cover"
           style={{ "background-image": `url(${props.service.image})` }}
         ></div>
       </div>
@@ -69,14 +69,14 @@ function MetallurgieComponent(props: { service: MetallurgieCategory }) {
               <div class="w-[85px] h-[7px] bg-[#0A33FF]"></div>
 
               {/* Titre + points */}
-              <div class="flex flex-col md:flex-row">
+              <div class="flex flex-col ">
                 <div class="flex-1 text-start">
-                  <h1 class="font-inter pt-8 text-2xl md:text-[64px] font-semibold leading-tight">
+                  <h1 class="font-inter pt-8 text-2xl md:text-[32px] font-semibold leading-tight">
                     {block.title}
                   </h1>
                 </div>
 
-                <div class="flex flex-col items-start md:items-end text-justify py-4 md:py-16 flex-1">
+                <div class="flex flex-col items-start md:items-left lg:items-end text-justify py-4 md:py-16 flex-1">
                   <For each={block.points}>
                     {(point) => (
                       <p class="font-inter text-base text-justify">{point}</p>
@@ -86,7 +86,7 @@ function MetallurgieComponent(props: { service: MetallurgieCategory }) {
               </div>
 
               {/* Sous-titre */}
-              <p class="font-inter text-base md:text-2xl text-justify mt-4 max-w-full md:max-w-[700px]">
+              <p class="font-inter text-base md:text-2xl text-start mt-4 max-w-full md:max-w-[700px]">
                 {block.subtitle}
               </p>
 

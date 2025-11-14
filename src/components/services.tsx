@@ -11,7 +11,7 @@ const services: ServiceCategory[] = [
   {
     title: "GENIE CIVIL",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.",
+      "Du génie civil à la logistique, nous offrons des solutions complètes pour vos projets. Grâce à une planification rigoureuse et des ressources maîtrisées, nous assurons la réussite de chaque étape, du chantier à la livraison.",
     points: [
       ".GENIE CIVIL & LOGISTIQUE",
       ".CONSTRUCTION &INFRASTRUCTURE",
@@ -50,16 +50,16 @@ function ServiceComponent(props: { service: ServiceCategory }) {
         class="
           flex flex-col 
           w-full md:w-2/3 
-          text-justify py-6 px-4
+          text-start py-6 px-4
         "
       >
-        <h1 class="font-inter text-2xl md:text-[64px] lg:text-[120px] font-bold fade-up leading-tight">
-          {props.service.title} <span>&</span>
+        <h1 class="font-inter text-4xl md:text-[64px]  lg:text-[120px] font-bold fade-up leading-tight">
+          {props.service.title} <span class="text-gray-400">&</span>
         </h1>
-        <h1 class="font-inter text-xl text-[#E0B818] md:text-[64px] lg:text-[120px] font-bold fade-up leading-tight">
+        <h1 class="font-inter text-4xl text-[#E0B818] md:text-[64px] lg:text-[120px] font-bold fade-up leading-tight">
           LOGISTIQUE
         </h1>
-        <p class="font-inter text-base md:text-2xl text-start fade-up mt-4">
+        <p class="uppercase font-inter text-base md:text-2xl text-start fade-up mt-4">
           {props.service.subtitle}
         </p>
       </div>

@@ -2,7 +2,7 @@ export default function Equipe() {
   const membres = [
     {
       poste: "C.E.O",
-      nom: "Nom 1",
+      nom: "MDS",
       image: "./images/DG.svg",
       description:
         "Définit la vision stratégique, dirige le développement global et veille à l’excellence opérationnelle.",
@@ -15,16 +15,16 @@ export default function Equipe() {
         "Responsable des opérations quotidiennes et de l’optimisation des processus industriels.",
     },
     {
-      poste: "DEV",
+      poste: "I.T",
       nom: "Corbacsama",
       image: "./images/BG.svg",
       description:
         "Conçoit, optimise et maintient les solutions logicielles afin de répondre aux besoins stratégiques de l’entreprise.",
     },
     {
-      poste: "R.S.P",
-      nom: "Nom 4",
-      image: "./images/RSP.svg",
+      poste: "RP/RAL",
+      nom: "Martino BOUNGOU",
+      image: "./images/RP.PNG",
       description:
         "Planifie, coordonne et supervise les flux pour assurer une livraison fiable et efficiente des opérations.",
     },
@@ -65,10 +65,10 @@ export default function Equipe() {
 
   return (
     <div class="flex flex-col m-8 pt-[64px] max-w-[1568px]">
-      <h1 class="text-[#0A33FF] pb-4 text-3xl font-semibold">
+      <h1 class="text-[#0A33FF] pb-4 text-2xl md:text-3xl font-semibold">
         AU COEUR DE NOS EQUIPES
       </h1>
-      <h1 class="text-black text-[80px] font-bold max-w-[1200px] nolineHeight">
+      <h1 class="text-black text-lg md:text-[80px] font-bold max-w-[1200px] nolineHeight">
         L'EXPERTISE INDUSTRIELLE AU SERVICE DE LA PLANETE
       </h1>
 

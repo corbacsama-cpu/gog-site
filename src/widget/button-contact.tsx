@@ -6,18 +6,26 @@ type ButtonContactProps = {
 };
 
 const ButtonContact = (props: ButtonContactProps) => {
+  const scrollToContact = (e: MouseEvent) => {
+    e.preventDefault();
+    const section = document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div class="flex justify-start">
-      <A
-        href="/about"
-        class="px-6 py-3 text-base rounded-[2px]"
+      <button
+        onClick={scrollToContact}
+        class="text-base rounded-[2px] p-4 cursor-pointer transition duration-300 hover:opacity-80"
         style={{
           "background-color": props.bgColor || "#000",
           color: props.textColor || "#fff",
         }}
       >
         CONTACT
-      </A>
+      </button>
     </div>
   );
 };

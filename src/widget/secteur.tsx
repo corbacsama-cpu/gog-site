@@ -47,19 +47,19 @@ const Secteur = (props: SecteurProps) => {
         max-w-full md:max-w-[1000px]
       ">
       <h1
-        class="font-inter nolineHeight text-2xl md:text-[64px] lg:text-[120px] font-bold fade-up leading-tight text-justify"
+        class="font-inter nolineHeight text-4xl md:text-[64px] lg:text-[110px] font-bold fade-up leading-tight text-start"
         style={{ color: props.rightTitleColor || "#000" }}
       >
         SECTEUR
       </h1>
       <h1
-        class="font-inter nolineHeight text-2xl md:text-[64px] lg:text-[120px] font-bold fade-up leading-tight text-justify"
+        class="font-inter nolineHeight text-4xl md:text-[64px] lg:text-[110px] font-bold fade-up leading-tight text-start"
         style={{ color: props.rightTitleColor || "#000" }}
       >
         {props.title}
       </h1>
       <p
-        class="font-inter max-w-full md:max-w-[700px] text-base md:text-2xl text-justify fade-up mt-4"
+        class="uppercase font-inter max-w-full md:max-w-[700px] text-base md:text-2xl text-start fade-up mt-4"
       >
         {props.subtitle}
       </p>

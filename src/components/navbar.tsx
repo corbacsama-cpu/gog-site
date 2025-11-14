@@ -1,6 +1,9 @@
 import type { Component } from "solid-js";
-import { A } from "@solidjs/router";
 import ButtonContact from "~/widget/button-contact";
+import { createSignal, Show } from "solid-js";
+
+const [menuOpen, setMenuOpen] = createSignal(false);
+const toggleMenu = () => setMenuOpen((o) => !o);
 
 interface NavbarProps {
   title?: string;
@@ -8,38 +11,70 @@ interface NavbarProps {
 }
 
 const Navbar: Component<NavbarProps> = (props) => {
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <nav class="bg-gradient-to-r from-black/80 to-black sticky top-0 z-90">
       <div class="relative max-w-[1200px] mx-auto h-20 px-6 flex items-center">
-        
         {/* Logo / titre */}
         <div class="flex-shrink-0 w-40">
-          <A
+          <a
             href="#"
             class="text-2xl font-bold flex items-center gap-2 text-white"
             onClick={(e) => {
               e.preventDefault();
               props.onTitleClick?.();
+              scrollToSection("home");
             }}
           >
             {props.title ?? "GOG"}
-          </A>
+          </a>
         </div>
 
-        {/* Menu centré */}
-        <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-6 text-white text-sm">
-          <A href="/">HOME</A>
-          <A href="/company">COMPANY</A>
-          <A href="/services">SERVICES</A>
-          <A href="/gallery">GALLERIE</A>
+        {/* Menu centré – caché sur mobile */}
+        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-6 text-white text-sm">
+          <button onClick={() => scrollToSection("home")}   class=" cursor-pointer transition-colors duration-200">HOME</button>
+          <button onClick={() => scrollToSection("company")}  class=" cursor-pointer transition-colors duration-200">COMPANY</button>
+          <button onClick={() => scrollToSection("services")} class=" cursor-pointer transition-colors duration-200">SERVICES</button>
+          <button onClick={() => scrollToSection("gallery")} class=" cursor-pointer transition-colors duration-200">GALLERIE</button>
         </div>
 
         {/* Bouton à droite */}
-        <div class="ml-auto">
+        <div class=" ml-auto hidden md:block">
           <ButtonContact />
         </div>
 
+        {/* Burger pour mobile */}
+        <div class="ml-auto md:hidden">
+          <button onClick={toggleMenu} class="text-white">
+            ☰
+          </button>
+        </div>
       </div>
+
+      {/* Menu mobile en dessous */}
+      <Show when={menuOpen()}>
+        <div class="flex flex-col px-6 pb-4 md:hidden bg-black/90 text-white space-y-2">
+          <button onClick={() => scrollToSection("home")}>HOME</button>
+          <button onClick={() => scrollToSection("company")}>COMPANY</button>
+          <button onClick={() => scrollToSection("services")}>SERVICES</button>
+          <button onClick={() => scrollToSection("gallery")}>GALLERIE</button>
+          <div class="flex justify-center">
+            <button
+              onClick={() => scrollToSection("contact")}
+              class="text-base rounded-[2px]"
+            >
+              CONTACT
+            </button>
+          </div>
+        </div>
+      </Show>
     </nav>
   );
 };

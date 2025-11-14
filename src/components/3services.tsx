@@ -18,17 +18,17 @@ export default function Service(props: ServiceProps) {
     {
       titleLines: ["GENIE CIVIL", "LOGISTIQUE"],
       subtitle:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien...",
+        "Nos équipes spécialisées prennent en charge la conception, l’exécution et la maintenance des infrastructures tout en assurant une logistique fluide et efficace...",
     },
     {
       titleLines: ["CONSTRUCTION", "INFRASTRUCTURE"],
       subtitle:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien...",
+        "Nous développons des solutions de construction et d’infrastructure innovantes, alliant performance, durabilité et sécurité.",
     },
     {
       titleLines: ["MAINTENANCE", "INDUSTRIELLE"],
       subtitle:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien...",
+        "De la supervision à l’intervention sur site, nos équipes assurent la maintenance mécanique, électrique et structurelle de vos équipements avec un haut niveau d’expertise.",
     },
   ];
 
@@ -68,7 +68,7 @@ export default function Service(props: ServiceProps) {
 
             {/* Texte */}
             <p
-              class="text-justify mb-12"
+              class="text-start mb-12"
               style={{ color: props.textColor || "#000" }}
             >
               {item.subtitle}
