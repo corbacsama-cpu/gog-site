@@ -1,13 +1,13 @@
 import { createSignal } from "solid-js";
 import { heroTexts } from "../api/herotext";
-import Process from "./process";
+
 
 export default function Hero() {
   const [text, setText] = createSignal(heroTexts[0]);
 
   return (
     <section
-      class="scroll-snap-align-start hero relative bg-[url('./images/expertise.png')] bg-cover 
+      class="scroll-snap-align-start hero relative bg-[url('/images/expertise.png')] bg-cover 
       pt-32 sm:pt-48 md:pt-64 lg:pt-[300px] space-y-4 sm:bg-center
     md:bg-top  w-full"
     >
