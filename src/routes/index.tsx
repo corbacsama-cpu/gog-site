@@ -8,7 +8,6 @@ import Metallurgie from "~/components/metallurgie";
 import Equipe from "~/components/equipe";
 import Contact from "~/components/contact";
 import Footer from "~/components/footer";
-import { Analytics } from "@vercel/analytics/next"
 
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
     <main class="w-full bg-black mx-auto scroll-snap-y-mandatory">
          <section id="home">
         <Hero />
-        <Analytics />
       </section>
       {/* Carrousel */}
       <HeroCarousel/>
