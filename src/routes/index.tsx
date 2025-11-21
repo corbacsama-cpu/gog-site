@@ -31,7 +31,7 @@ export default function Home() {
         {/* Hero 1 */}
         <section
           class="hero relative m-4 md:m-8 min-h-[300px] md:min-h-[500px] lg:min-h-[700px] 
-         bg-[url('./images/stock.svg')] bg-cover bg-center"
+         bg-[url('/images/stock.svg')] bg-cover bg-center"
         ></section>
         {/* service  */}
         <Service bgTrait="#E0B818" />
