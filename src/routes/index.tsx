@@ -12,7 +12,7 @@ import Footer from "~/components/footer";
 
 export default function Home() {
   return (
-    <main class="w-[1600px] bg-black mx-auto scroll-snap-y-mandatory">
+    <main class="bg-black mx-auto scroll-snap-y-mandatory">
          <section id="home">
         <Hero />
       </section>
