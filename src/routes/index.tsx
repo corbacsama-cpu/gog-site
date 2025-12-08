@@ -12,7 +12,7 @@ import Footer from "~/components/footer";
 
 export default function Home() {
   return (
-    <main class="w-full bg-black mx-auto scroll-snap-y-mandatory">
+    <main class="w-[1600px] bg-black mx-auto scroll-snap-y-mandatory">
          <section id="home">
         <Hero />
       </section>
@@ -64,7 +64,7 @@ export default function Home() {
       hero relative 
       w-full 
       min-h-[300px] md:min-h-[500px] lg:min-h-[700px] 
-      bg-[url('./images/secteur.png')] 
+      bg-[url('/images/secteur.png')] 
       bg-cover bg-center
     "></section>
         </div>

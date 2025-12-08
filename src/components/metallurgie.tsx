@@ -16,7 +16,7 @@ export type MetallurgieCategory = {
 // Exemple de données
 const services: MetallurgieCategory[] = [
   {
-    image: "./images/meta.png",
+    image: "/images/meta.png",
     blocks: [
       {
         title: "METALLURGIE",
