@@ -21,29 +21,43 @@ const services: MetallurgieCategory[] = [
       {
         title: "METALLURGIE",
         subtitle:
-          "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi...",
+          "des services métallurgiques professionnels pour optimiser la production, assurer la qualité des pièces et garantir un suivi rigoureux des opérations industrielles.",
         points: [
-          ".CARTE DE POINTAGE",
-          ".CARTE DE POINTAGE",
-          ".CARTE DE POINTAGE",
+          ".Contrôle qualité métallurgique",
+          ".Traitement et transformation des métaux",
+          ".Usinage et fabrication de pièces",
         ],
         breakpoint: [
-          ".ENDRERIT URNA.PELLENTESQUE SI",
-          ".ENDRERIT URNA.PELLENTESQUE SI",
-          ".ENDRERIT URNA.PELLENTESQUE SI",
+          ".Suivi précis des opérations en atelier",
+          ".Amélioration de la productivité industrielle",
+          ".Traçabilité complète des processus",
         ],
       },
       {
-        title: "MAINTENANCE INDUSTRIELLE ",
-        subtitle: "Autre texte pour le bloc 2",
-        points: [".POINT 1", ".POINT 2"],
-        breakpoint: [".BREAK A", ".BREAK B"],
+        title: "MAINTENANCE INDUSTRIELLE",
+        subtitle:
+          "maintenance préventive et corrective des équipements industriels afin de garantir la continuité de production et réduire les arrêts techniques.",
+        points: [
+          ".Maintenance préventive des machines",
+          ".Maintenance corrective et dépannage",
+        ],
+        breakpoint: [
+          ".Réduction des temps d’arrêt de production",
+          ".Optimisation de la durée de vie des équipements",
+        ],
       },
       {
-        title: "METALLURGIE",
-        subtitle: "Encore un autre texte pour le bloc 3",
-        points: [".POINT X", ".POINT Y"],
-        breakpoint: [".BREAK X", ".BREAK Y"],
+        title: "CONSTRUCTION & INFRASTRUCTURE",
+        subtitle:
+          "Réaliser des projets de construction et d’infrastructure en garantissant solidité, conformité technique et respect des délais d’exécution.",
+        points: [
+          ".Construction de bâtiments industriels et civils",
+          ".Réalisation d’ouvrages et infrastructures",
+        ],
+        breakpoint: [
+          ".Respect des normes et standards de qualité",
+          ".Maîtrise des coûts et des délais de réalisation",
+        ],
       },
     ],
   },
@@ -79,14 +93,16 @@ function MetallurgieComponent(props: { service: MetallurgieCategory }) {
                 <div class="flex flex-col items-start md:items-left lg:items-end text-justify py-4 md:py-16 flex-1">
                   <For each={block.points}>
                     {(point) => (
-                      <p class="font-inter text-base text-justify">{point}</p>
+                      <p class="uppercase font-inter text-base text-justify">
+                        {point}
+                      </p>
                     )}
                   </For>
                 </div>
               </div>
 
               {/* Sous-titre */}
-              <p class="font-inter text-base md:text-2xl text-start mt-4 max-w-full md:max-w-[700px]">
+              <p class="uppercase font-inter text-base md:text-2xl text-start mt-4 max-w-full md:max-w-[700px]">
                 {block.subtitle}
               </p>
 
@@ -94,7 +110,9 @@ function MetallurgieComponent(props: { service: MetallurgieCategory }) {
               <div class="flex flex-col items-start text-justify py-4 flex-1">
                 <For each={block.breakpoint}>
                   {(bp) => (
-                    <p class="font-inter text-base text-justify">{bp}</p>
+                    <p class="uppercase font-inter text-base text-justify">
+                      {bp}
+                    </p>
                   )}
                 </For>
               </div>

@@ -69,7 +69,7 @@ function ServiceComponent(props: { service: ServiceCategory }) {
 
 export default function Services() {
   return (
-    <div class="overflow-hidden w-full flex  bg-white py-6">
+    <div id="services" class="overflow-hidden w-full flex  bg-white py-6">
       <For each={services}>
         {(service) => <ServiceComponent service={service} />}
       </For>

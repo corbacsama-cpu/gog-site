@@ -68,7 +68,7 @@ export default function Equipe() {
       <h1 class="text-[#0A33FF] pb-4 text-2xl md:text-3xl font-semibold">
         AU COEUR DE NOS EQUIPES
       </h1>
-      <h1 class="text-black text-lg md:text-[80px] font-bold max-w-[1200px] nolineHeight">
+      <h1 class="text-black text-lg md:text-[64px] font-bold max-w-[1200px] nolineHeight">
         L'EXPERTISE INDUSTRIELLE AU SERVICE DE LA PLANETE
       </h1>
 
