@@ -1,6 +1,7 @@
 import type { Component } from "solid-js";
 import ButtonContact from "~/widget/button-contact";
 import { createSignal, Show } from "solid-js";
+import logo from "../icons/gog.png";
 
 const [menuOpen, setMenuOpen] = createSignal(false);
 const toggleMenu = () => setMenuOpen((o) => !o);
@@ -33,7 +34,7 @@ const Navbar: Component<NavbarProps> = (props) => {
               scrollToSection("home");
             }}
           >
-            {props.title ?? "GOG"}
+           <img src="/icons/gog.png" alt="Galaxy Oil & Gas" class="h-10 w-auto" />
           </a>
         </div>
 

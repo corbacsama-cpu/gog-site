@@ -9,20 +9,27 @@ export default function Equipe() {
     },
     {
       poste: "D.O",
-      nom: "Nom 2",
+      nom: "Grace Chanel NGOUAKA",
       image: "./images/DO.svg",
       description:
         "Responsable des opérations quotidiennes et de l’optimisation des processus industriels.",
     },
     {
+      poste: "QHSE",
+      nom: "Freddy Bonheur MBOUKOU SOLO",
+      image: "./images/BG.svg",
+      description:
+        "Pilote la stratégie de l’entreprise, garantit la conformité réglementaire, la maîtrise des risques et le développement d’une culture de sécurité et de qualité.",
+    },
+    {
       poste: "I.T",
-      nom: "Corbacsama",
+      nom: "Geda Rosen MANT'S",
       image: "./images/BG.svg",
       description:
         "Conçoit, optimise et maintient les solutions logicielles afin de répondre aux besoins stratégiques de l’entreprise.",
     },
     {
-      poste: "RP/RAL",
+      poste: "RAL",
       nom: "Martino BOUNGOU",
       image: "./images/RP.PNG",
       description:
@@ -64,7 +71,7 @@ export default function Equipe() {
   };
 
   return (
-    <div class="flex flex-col m-8 pt-[64px] max-w-[1568px]">
+    <div id="company" class="flex flex-col m-8 pt-[64px] ">
       <h1 class="text-[#0A33FF] pb-4 text-2xl md:text-3xl font-semibold">
         AU COEUR DE NOS EQUIPES
       </h1>
@@ -92,7 +99,7 @@ export default function Equipe() {
             </div>
 
             {/* Overlay en bas */}
-            <div class="absolute bottom-0 left-0 w-full bg-black/50 h-[150px] flex items-center justify-center">
+            <div class="absolute bottom-0 left-0 w-full bg-black/50 h-[200px] flex items-center justify-center">
               <div class="text-start text-white px-8">
                 <h1 class="font-inter text-4xl md:text-2xl font-bold fade-up">
                   {membre.nom}

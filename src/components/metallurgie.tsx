@@ -118,7 +118,7 @@ function MetallurgieComponent(props: { service: MetallurgieCategory }) {
               </div>
 
               <div class="items-end pb-8 md:pb-32">
-                <ButtonContact bgColor="#0A33FF" />
+                <ButtonContact bgColor="#0A33FF" textColor="#FFF" />
               </div>
             </div>
           )}

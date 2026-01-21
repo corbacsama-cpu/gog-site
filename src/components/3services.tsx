@@ -58,7 +58,7 @@ export default function Service(props: ServiceProps) {
 
             {/* Titre en deux lignes */}
             <h1
-              class="text-4xl font-bold mb-8"
+              class="text-2xl md:text-3xl font-bold mb-8"
               style={{ color: props.textColor || "#000" }}
             >
               {item.titleLines.map((line) => (
