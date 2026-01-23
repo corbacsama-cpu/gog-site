@@ -31,7 +31,7 @@ export default function Equipe() {
     {
       poste: "RAL",
       nom: "Martino BOUNGOU",
-      image: "./images/RP.PNG",
+      image: "./images/m.jpg",
       description:
         "Planifie, coordonne et supervise les flux pour assurer une livraison fiable et efficiente des opérations.",
     },

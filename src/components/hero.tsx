@@ -7,9 +7,9 @@ export default function Hero() {
 
   return (
     <section
-      class="scroll-snap-align-start hero relative bg-[url('/images/expertise.png')] bg-cover 
-      pt-32 sm:pt-48 md:pt-64 lg:pt-[300px] space-y-4 sm:bg-center
-    md:bg-top  w-full"
+      class="scroll-snap-align-start hero relative bg-[url('/images/expertise.png')] bg-cover no-repeat center
+      pt-32 sm:pt-48 md:pt-64 lg:pt-[300px] sm:bg-center
+    md:bg-top"
     >
       {/* overlay */}
       <div class="absolute inset-0 bg-black/50"></div>
@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Container */}
       <div
         class="relative flex flex-col lg:flex-row  justify-between items-center lg:items-end 
-        gap-6 px-4 sm:px-8 text-white">
+        gap-6 px-4 sm:px-8 text-white max-w-[1200px] mx-auto pb-8">
         {/* Carré haut gauche */}
       <div class="absolute top-0 md:top-10 lg:top-16 left-4 w-8 h-8  bg-white"/>
 
@@ -36,7 +36,7 @@ export default function Hero() {
         <div class="flex flex-col gap-4 items-start w-[80%]  lg:w-1/1 order-1 lg:order-2 ">
 
           <div class="flex justify-end md:flex md:justify-end">
-            <h1 class="text-4xl md:text-6xl lg:text-[120px] font-bold fade-up">
+            <h1 class="text-4xl md:text-6xl lg:text-[100px] font-bold fade-up">
               {text().map((line) => (
                 <span class="block nolineheight">{line}</span>
               ))}
@@ -52,12 +52,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <div class="flex  py-8 mx-4 justify-between text-xs sm:text-sm md:text-lg font-semibold tracking-wide">
-                  <span>DEVELOPPEMENT</span>
-                  <span>PROCÉDÉS</span>
-                  <span>PERFORMANCES</span>
-                </div>
     </section>
   );
 }
