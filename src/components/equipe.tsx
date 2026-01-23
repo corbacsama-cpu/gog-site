@@ -3,28 +3,28 @@ export default function Equipe() {
     {
       poste: "C.E.O",
       nom: "MDS",
-      image: "./images/DG.svg",
+      image: "./images/m.jpg",
       description:
         "Définit la vision stratégique, dirige le développement global et veille à l’excellence opérationnelle.",
     },
     {
       poste: "D.O",
       nom: "Grace Chanel NGOUAKA",
-      image: "./images/DO.svg",
+      image: "./images/m.jpg",
       description:
         "Responsable des opérations quotidiennes et de l’optimisation des processus industriels.",
     },
     {
       poste: "QHSE",
       nom: "Freddy Bonheur MBOUKOU SOLO",
-      image: "./images/BG.svg",
+      image: "./images/m.jpg",
       description:
-        "Pilote la stratégie de l’entreprise, garantit la conformité réglementaire, la maîtrise des risques et le développement d’une culture de sécurité et de qualité.",
+        "Pilote la stratégie de l’entreprise,garantit la qualité, la sécurité, la santé et le respect de l’environnement au sein de l’entreprise.",
     },
     {
       poste: "I.T",
       nom: "Geda Rosen MANT'S",
-      image: "./images/BG.svg",
+      image: "./images/m.jpg",
       description:
         "Conçoit, optimise et maintient les solutions logicielles afin de répondre aux besoins stratégiques de l’entreprise.",
     },
@@ -34,6 +34,13 @@ export default function Equipe() {
       image: "./images/RP.PNG",
       description:
         "Planifie, coordonne et supervise les flux pour assurer une livraison fiable et efficiente des opérations.",
+    },
+    {
+      poste: "AD",
+      nom: "Houmelle MALANDA",
+      image: "./images/p.jpg",
+      description:
+        "Assure la gestion administrative, la coordination des agendas et le soutien stratégique à la direction.",
     },
   ];
 

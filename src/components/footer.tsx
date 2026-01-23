@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer: Component<FooterProps> = (props) => {
   return (
-    <footer class="footer last">
+    <footer class="footer last py-4">
   <div class="copyright">
     &copy; {new Date().getFullYear()} {props.author ?? "GOG"}. TOUS DROITS RÉSERVÉS.
   </div>

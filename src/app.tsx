@@ -9,7 +9,7 @@ import Footer from "./components/footer";
 
 export default function App() {
   const [title, setTitle] = createSignal("GOG");
-  
+
   return (
     <Router
       root={(props) => (
@@ -19,17 +19,16 @@ export default function App() {
           {/* Navbar en haut */}
           <Navbar
             title={title()}
-            onTitleClick={() => setTitle("GALAXY OIL AND GAS")}/>
-          
+            onTitleClick={() => setTitle("GALAXY OIL AND GAS")}
+          />
+
           {/* Contenu des pages */}
           <main>
             <Suspense>{props.children}</Suspense>
           </main>
 
-          {/* Footer en bas */}
-        {/* <Footer author={'GALAXY OIL AND GAS'}/> */}
-
-
+          {/* footer */}
+          <Footer />
         </MetaProvider>
       )}
     >

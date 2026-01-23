@@ -11,7 +11,8 @@ import Footer from "~/components/footer";
 
 export default function Home() {
   return (
-    <main class="max-w-[1600px] bg-black mx-auto scroll-snap-y-mandatory">
+    <main class=" bg-black mx-auto scroll-snap-y-mandatory">
+      <div class="max-w-[1600px] mx-auto">
       <section id="home">
         <Hero />
       </section>
@@ -92,18 +93,18 @@ export default function Home() {
           </div>
         </section>
         {/* Equipe */}
-        {/* 👥 SECTION ÉQUIPE */}
+        
         <section id="company">
           <Equipe />
         </section>
-        {/* Contact */}
-        {/* 📞 SECTION CONTACT */}
-        <section id="contact" class="bg-black">
+
+      </div>
+      </div>
+         {/* Contact */}
+      <section id="contact" class=" bg-black">
           <Contact />
         </section>
-        {/* footer */}
-        <Footer />
-      </div>
+        
     </main>
   );
 }
